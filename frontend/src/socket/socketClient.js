@@ -17,7 +17,8 @@ export const initSocket = (token) => {
         return socket;
     }
 
-    socket = io(import.meta.env.VITE_SOCKET_URL, {
+    const socketUrl = import.meta.env.VITE_SOCKET_URL || import.meta.env.VITE_API_URL || 'http://localhost:4000';
+    socket = io(socketUrl, {
         auth: {
             token: token, // Note: Backend expects raw token without "Bearer " prefix
         },
