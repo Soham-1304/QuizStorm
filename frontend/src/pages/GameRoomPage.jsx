@@ -112,13 +112,13 @@ const GameRoomPage = () => {
                 </div>
             </div>
 
-            <div className="max-w-6xl mx-auto w-full relative z-10 flex flex-col items-center justify-start pt-4 flex-grow">
+            <div className="max-w-6xl mx-auto w-full relative z-10 flex flex-col items-center justify-start pt-2 flex-grow">
                 {/* Main Game Area */}
                 <div className="w-full max-w-5xl">
                     {/* Timer Centered (Hide for Host-Only) */}
                     {(!isHost || isHostPlaying) && (
-                        <div className="flex justify-center -mb-12 relative z-20">
-                            <div className="bg-white rounded-full p-4 border-4 border-black shadow-[6px_6px_0px_black] transform transition-transform hover:scale-110">
+                        <div className="flex justify-center -mb-10 relative z-20">
+                            <div className="bg-white rounded-full p-2 border-4 border-black shadow-[4px_4px_0px_black] transform transition-transform hover:scale-110 scale-90">
                                 <Timer
                                     timeRemaining={timeRemaining}
                                     totalTime={currentQuestion.timeLimit}
