@@ -134,58 +134,58 @@ const LandingPage = () => {
 
     // Public Landing View
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden">
+        <div className="min-h-screen flex flex-col items-center justify-between p-4 relative overflow-hidden text-center">
             {/* Background Decor (Subtle & Tacky) */}
-            <div className="absolute top-[-10%] left-[-5%] w-[800px] h-[800px] bg-gradient-to-br from-yellow-100 to-transparent rounded-full opacity-60 mix-blend-multiply filter blur-[80px] animate-float"></div>
-            <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-gradient-to-tr from-purple-100 to-transparent rounded-full opacity-60 mix-blend-multiply filter blur-[60px] animate-float" style={{ animationDelay: '3s' }}></div>
+            <div className="absolute top-[-10%] left-[-5%] w-[600px] h-[600px] bg-gradient-to-br from-yellow-100 to-transparent rounded-full opacity-60 mix-blend-multiply filter blur-[80px] animate-float pointer-events-none"></div>
+            <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-gradient-to-tr from-purple-100 to-transparent rounded-full opacity-60 mix-blend-multiply filter blur-[60px] animate-float pointer-events-none" style={{ animationDelay: '3s' }}></div>
 
-            <div className="text-center z-10 max-w-5xl mt-[-50px]">
-                <h1 className="text-8xl md:text-[9rem] font-bold text-gray-900 mb-8 drop-shadow-sm tracking-tighter transform -rotate-2 hover:rotate-0 transition-transform duration-500 cursor-default">
+            <div className="z-10 max-w-5xl w-full flex flex-col items-center flex-grow justify-center pt-12 md:pt-20">
+                <h1 className="text-6xl md:text-8xl font-bold text-gray-900 mb-6 drop-shadow-sm tracking-tighter transform -rotate-2 hover:rotate-0 transition-transform duration-500 cursor-default">
                     Quiz
                     <span className="text-indigo-600 inline-block transform rotate-3">Storm</span>
-                    <span className="text-orange-500 text-7xl align-top ml-4 absolute top-2 right-[-60px] animate-bounce">⚡</span>
+                    <span className="text-orange-500 text-5xl md:text-6xl align-top ml-2 absolute top-0 -right-8 md:-right-12 animate-bounce">⚡</span>
                 </h1>
 
-                <p className="text-3xl md:text-4xl text-gray-800 font-medium mb-16 max-w-3xl mx-auto leading-relaxed font-doodle transform rotate-1">
+                <p className="text-xl md:text-3xl text-gray-800 font-medium mb-10 max-w-2xl mx-auto leading-relaxed font-doodle transform rotate-1">
                     The most <span className="bg-pink-200 px-2 transform -rotate-2 inline-block shadow-sm">chaotic</span> and <span className="bg-blue-200 px-2 transform rotate-2 inline-block shadow-sm">fun</span> trivia game for you and your friends!
                 </p>
 
-                <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
+                <div className="flex flex-col md:flex-row gap-6 justify-center items-center mb-16">
                     <Link
                         to="/login"
-                        className="doodle-button bg-yellow-400 text-gray-900 border-black hover:bg-yellow-300 rotate-2 text-3xl px-12 py-5 shadow-[8px_8px_0px_black] hover:shadow-[10px_10px_0px_black]"
+                        className="doodle-button bg-yellow-400 text-gray-900 border-black hover:bg-yellow-300 rotate-2 text-xl md:text-2xl px-8 py-3 md:px-10 md:py-4 shadow-[6px_6px_0px_black] hover:shadow-[8px_8px_0px_black]"
                     >
                         Play Now 🚀
                     </Link>
                     <a
                         href="#features"
-                        className="doodle-button bg-white text-gray-900 border-black -rotate-2 hover:bg-gray-50 text-3xl px-10 py-5 shadow-[8px_8px_0px_black] hover:shadow-[10px_10px_0px_black]"
+                        className="doodle-button bg-white text-gray-900 border-black -rotate-2 hover:bg-gray-50 text-xl md:text-2xl px-8 py-3 md:px-10 md:py-4 shadow-[6px_6px_0px_black] hover:shadow-[8px_8px_0px_black]"
                     >
                         Learn More 🧐
                     </a>
                 </div>
+
+                {/* Feature Squiggles */}
+                <div id="features" className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-6xl w-full px-4 text-left">
+                    <div className="doodle-card bg-pink-50 transform rotate-1 hover:rotate-0 transition-transform border-2 md:border-3 shadow-[4px_4px_0px_rgba(0,0,0,0.1)] p-6">
+                        <div className="text-4xl md:text-5xl mb-4">🏆</div>
+                        <h3 className="text-2xl font-bold mb-2 font-doodle">Compete</h3>
+                        <p className="text-lg font-doodle text-gray-600 leading-snug">Battle your friends in real-time and climb the leaderboard!</p>
+                    </div>
+                    <div className="doodle-card bg-blue-50 transform -rotate-1 hover:rotate-0 transition-transform border-2 md:border-3 shadow-[4px_4px_0px_rgba(0,0,0,0.1)] p-6">
+                        <div className="text-4xl md:text-5xl mb-4">⏱️</div>
+                        <h3 className="text-2xl font-bold mb-2 font-doodle">Race</h3>
+                        <p className="text-lg font-doodle text-gray-600 leading-snug">Answer fast! The clock is ticking and slower answers get fewer points.</p>
+                    </div>
+                    <div className="doodle-card bg-green-50 transform rotate-2 hover:rotate-0 transition-transform border-2 md:border-3 shadow-[4px_4px_0px_rgba(0,0,0,0.1)] p-6">
+                        <div className="text-4xl md:text-5xl mb-4">🎨</div>
+                        <h3 className="text-2xl font-bold mb-2 font-doodle">Create</h3>
+                        <p className="text-lg font-doodle text-gray-600 leading-snug">Host your own rooms and challenge anyone with a code.</p>
+                    </div>
+                </div>
             </div>
 
-            {/* Feature Squiggles (Moved down slightly) */}
-            <div className="mt-32 grid md:grid-cols-3 gap-10 max-w-7xl w-full z-10 px-8">
-                <div className="doodle-card bg-pink-50 transform rotate-1 hover:rotate-0 transition-transform border-3 shadow-[6px_6px_0px_rgba(0,0,0,0.1)]">
-                    <div className="text-6xl mb-6">🏆</div>
-                    <h3 className="text-3xl font-bold mb-3 font-doodle">Compete</h3>
-                    <p className="text-xl font-doodle text-gray-600">Battle your friends in real-time and climb the leaderboard!</p>
-                </div>
-                <div className="doodle-card bg-blue-50 transform -rotate-1 hover:rotate-0 transition-transform border-3 shadow-[6px_6px_0px_rgba(0,0,0,0.1)]">
-                    <div className="text-6xl mb-6">⏱️</div>
-                    <h3 className="text-3xl font-bold mb-3 font-doodle">Race</h3>
-                    <p className="text-xl font-doodle text-gray-600">Answer fast! The clock is ticking and slower answers get fewer points.</p>
-                </div>
-                <div className="doodle-card bg-green-50 transform rotate-2 hover:rotate-0 transition-transform border-3 shadow-[6px_6px_0px_rgba(0,0,0,0.1)]">
-                    <div className="text-6xl mb-6">🎨</div>
-                    <h3 className="text-3xl font-bold mb-3 font-doodle">Create</h3>
-                    <p className="text-xl font-doodle text-gray-600">Host your own rooms and challenge anyone with a code.</p>
-                </div>
-            </div>
-
-            <footer className="absolute bottom-6 text-gray-400 font-doodle text-xl">
+            <footer className="w-full text-center text-gray-400 font-doodle text-lg py-6 mt-8">
                 Made with ❤️ & ☕ around the world
             </footer>
         </div>
