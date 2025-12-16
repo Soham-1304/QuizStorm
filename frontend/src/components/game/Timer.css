@@ -1,0 +1,69 @@
+/* Timer Styles */
+
+.timer-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.timer-display {
+    position: relative;
+}
+
+.timer-circle {
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+
+.timer-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.timer-circle-bg {
+    fill: none;
+    stroke: #e0e0e0;
+    stroke-width: 8;
+}
+
+.timer-circle-progress {
+    fill: none;
+    stroke-width: 8;
+    transition: stroke-dashoffset 0.5s linear;
+}
+
+.timer-circle.green .timer-circle-progress {
+    stroke: #4CAF50;
+}
+
+.timer-circle.yellow .timer-circle-progress {
+    stroke: #FFC107;
+}
+
+.timer-circle.red .timer-circle-progress {
+    stroke: #f44336;
+}
+
+.timer-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.timer-number {
+    display: block;
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+}
+
+.timer-label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    text-transform: uppercase;
+}

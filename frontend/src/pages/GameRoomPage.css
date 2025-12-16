@@ -1,0 +1,77 @@
+/* Game Room Page Styles */
+
+.game-room-page {
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.game-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 16px 24px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-header h2 {
+    color: #333;
+    margin: 0;
+}
+
+.question-number {
+    background: #667eea;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.game-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+.question-section {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-section {
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.answer-feedback {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.answer-feedback .correct {
+    color: #4CAF50;
+}
+
+.answer-feedback .incorrect {
+    color: #f44336;
+}
+
+@media (max-width: 768px) {
+    .game-content {
+        grid-template-columns: 1fr;
+    }
+}
