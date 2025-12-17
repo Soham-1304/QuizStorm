@@ -67,3 +67,23 @@
     color: #666;
     text-transform: uppercase;
 }
+
+@media (max-width: 768px) {
+    .timer-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .timer-number {
+        font-size: 24px;
+    }
+
+    .timer-label {
+        font-size: 10px;
+    }
+
+    .timer-circle-bg,
+    .timer-circle-progress {
+        stroke-width: 6;
+    }
+}

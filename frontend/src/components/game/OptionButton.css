@@ -65,3 +65,22 @@
 .x-mark {
     color: #f44336;
 }
+
+@media (max-width: 768px) {
+    .option-button {
+        padding: 12px 16px;
+        min-height: 52px;
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    .option-label {
+        font-size: 14px;
+        min-width: 20px;
+    }
+
+    .check-mark,
+    .x-mark {
+        font-size: 16px;
+    }
+}

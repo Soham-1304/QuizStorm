@@ -139,7 +139,7 @@ const LandingPage = () => {
             <div className="absolute top-[-10%] left-[-5%] w-[600px] h-[600px] bg-gradient-to-br from-yellow-100 to-transparent rounded-full opacity-60 mix-blend-multiply filter blur-[80px] animate-float pointer-events-none"></div>
             <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-gradient-to-tr from-purple-100 to-transparent rounded-full opacity-60 mix-blend-multiply filter blur-[60px] animate-float pointer-events-none" style={{ animationDelay: '3s' }}></div>
 
-            <div className="z-10 max-w-5xl w-full flex flex-col items-center flex-grow justify-center pt-12 md:pt-20">
+            <div className="z-10 max-w-5xl w-full flex flex-col items-center pt-12 md:pt-20">
                 <h1 className="text-4xl md:text-8xl font-bold text-gray-900 mb-6 drop-shadow-sm tracking-tighter transform -rotate-2 hover:rotate-0 transition-transform duration-500 cursor-default">
                     Quiz
                     <span className="text-indigo-600 inline-block transform rotate-3">Storm</span>
@@ -166,7 +166,7 @@ const LandingPage = () => {
                 </div>
 
                 {/* Feature Squiggles */}
-                <div id="features" className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-6xl w-full px-4 text-left">
+                <div id="features" className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-6xl w-full px-4 text-left scroll-mt-4">
                     <div className="doodle-card bg-pink-50 transform rotate-1 hover:rotate-0 transition-transform border-2 md:border-3 shadow-[4px_4px_0px_rgba(0,0,0,0.1)] p-6">
                         <div className="text-4xl md:text-5xl mb-4">🏆</div>
                         <h3 className="text-2xl font-bold mb-2 font-doodle">Compete</h3>

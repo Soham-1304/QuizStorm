@@ -98,27 +98,27 @@ const GameRoomPage = () => {
             )}
 
             {/* Header Info - Absolutely Positioned */}
-            <div className="absolute top-6 left-6 z-20">
-                <div className="bg-white border-2 border-black px-6 py-3 rounded-full transform -rotate-2 shadow-[4px_4px_0px_black]">
-                    <span className="font-doodle font-bold text-2xl">Room: {roomCode}</span>
+            <div className="absolute top-2 md:top-6 left-2 md:left-6 z-20">
+                <div className="bg-white border-2 border-black px-3 py-1 md:px-6 md:py-3 rounded-full transform -rotate-2 shadow-[4px_4px_0px_black]">
+                    <span className="font-doodle font-bold text-sm md:text-2xl">Room: {roomCode}</span>
                 </div>
             </div>
 
-            <div className="absolute top-6 right-6 z-20">
-                <div className="bg-white border-2 border-black px-6 py-3 rounded-full transform rotate-2 shadow-[4px_4px_0px_black]">
-                    <span className="font-doodle font-bold text-2xl">
+            <div className="absolute top-2 md:top-6 right-2 md:right-6 z-20">
+                <div className="bg-white border-2 border-black px-3 py-1 md:px-6 md:py-3 rounded-full transform rotate-2 shadow-[4px_4px_0px_black]">
+                    <span className="font-doodle font-bold text-sm md:text-2xl">
                         Q {(currentQuestion.questionIndex || 0) + 1}
                     </span>
                 </div>
             </div>
 
-            <div className="max-w-6xl mx-auto w-full relative z-10 flex flex-col items-center justify-start pt-2 flex-grow">
+            <div className="max-w-6xl mx-auto w-full relative z-10 flex flex-col items-center justify-start pt-16 md:pt-20 flex-grow">
                 {/* Main Game Area */}
                 <div className="w-full max-w-5xl">
                     {/* Timer Centered (Hide for Host-Only) */}
                     {(!isHost || isHostPlaying) && (
-                        <div className="flex justify-center -mb-10 relative z-20">
-                            <div className="bg-white rounded-full p-2 border-4 border-black shadow-[4px_4px_0px_black] transform transition-transform hover:scale-110 scale-90">
+                        <div className="flex justify-center mb-4 md:-mb-10 relative z-20">
+                            <div className="bg-white rounded-full p-1 md:p-2 border-2 md:border-4 border-black shadow-[2px_2px_0px_black] md:shadow-[4px_4px_0px_black] transform transition-transform hover:scale-110 scale-75 md:scale-90">
                                 <Timer
                                     timeRemaining={timeRemaining}
                                     totalTime={currentQuestion.timeLimit}
@@ -147,7 +147,7 @@ const GameRoomPage = () => {
 
                     {/* Feedback Badge (Floating) */}
                     {answerLocked && (
-                        <div className={`mt-8 mx-auto max-w-md p-4 border-4 border-black rounded-xl text-center font-bold text-3xl font-doodle transform rotate-1 shadow-[6px_6px_0px_black] animate-bounce ${correctOption !== null
+                        <div className={`mt-4 md:mt-8 mx-auto max-w-md p-3 md:p-4 border-2 md:border-4 border-black rounded-xl text-center font-bold text-xl md:text-3xl font-doodle transform rotate-1 shadow-[4px_4px_0px_black] md:shadow-[6px_6px_0px_black] animate-bounce ${correctOption !== null
                             ? (selectedOption === correctOption ? 'bg-green-400 text-white' : 'bg-red-400 text-white')
                             : 'bg-yellow-300'
                             }`}>

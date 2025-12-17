@@ -19,11 +19,17 @@
 }
 
 @media (max-width: 576px) {
+    .question-card {
+        margin-top: 12px;
+    }
+
     .options-grid {
         grid-template-columns: 1fr;
+        gap: 12px;
     }
 
     .question-text {
-        font-size: 20px;
+        font-size: 18px;
+        margin-bottom: 20px;
     }
 }
