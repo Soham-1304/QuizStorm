@@ -64,7 +64,7 @@ const LandingPage = () => {
                         </div>
                         <div>
                             <p className="text-base font-bold text-gray-500 uppercase tracking-widest mb-1 group-hover:text-blue-500 transition-colors">Welcome back,</p>
-                            <h2 className="text-4xl md:text-5xl font-bold font-doodle group-hover:underline decoration-wavy decoration-2 decoration-blue-500 underline-offset-4 transition-all">{user.username}</h2>
+                            <h2 className="text-2xl md:text-5xl font-bold font-doodle group-hover:underline decoration-wavy decoration-2 decoration-blue-500 underline-offset-4 transition-all">{user.username}</h2>
                         </div>
                     </Link>
                     <button
@@ -78,9 +78,9 @@ const LandingPage = () => {
                 {/* Dashboard Cards - Centered higher up */}
                 <div className="w-full max-w-5xl z-10 flex-1 flex flex-col justify-start mt-8">
                     <div className="text-center mb-12">
-                        <h1 className="text-6xl md:text-7xl font-bold font-doodle mb-4 transform -rotate-1 relative inline-block text-gray-900">
+                        <h1 className="text-4xl md:text-7xl font-bold font-doodle mb-4 transform -rotate-1 relative inline-block text-gray-900">
                             <span className="relative z-10">Ready to Rumble?</span>
-                            <span className="absolute -top-8 -right-12 text-6xl animate-bounce" style={{ animationDuration: '3s' }}>⚡</span>
+                            <span className="absolute -top-8 -right-12 text-4xl md:text-6xl animate-bounce" style={{ animationDuration: '3s' }}>⚡</span>
                         </h1>
                     </div>
 
@@ -88,40 +88,40 @@ const LandingPage = () => {
                         {/* Host Card */}
                         <div
                             onClick={handleCreateRoom}
-                            className="doodle-card bg-green-50 transform rotate-1 hover:rotate-2 hover:-translate-y-2 transition-all cursor-pointer group min-h-[320px] flex flex-col justify-between border-3"
+                            className="doodle-card bg-green-50 transform rotate-1 hover:rotate-2 hover:-translate-y-2 transition-all cursor-pointer group min-h-[280px] md:min-h-[320px] flex flex-col justify-between border-3"
                         >
                             <div>
                                 <div className="flex justify-between items-start mb-6">
-                                    <h3 className="text-4xl font-bold font-doodle">Host a Game</h3>
-                                    <div className="text-5xl transform group-hover:scale-125 transition-transform duration-300">👑</div>
+                                    <h3 className="text-2xl md:text-4xl font-bold font-doodle">Host a Game</h3>
+                                    <div className="text-4xl md:text-5xl transform group-hover:scale-125 transition-transform duration-300">👑</div>
                                 </div>
-                                <p className="font-doodle text-2xl mb-8 text-gray-600 leading-relaxed">Create a room, pick a quiz, and challenge your friends.</p>
+                                <p className="font-doodle text-lg md:text-2xl mb-8 text-gray-600 leading-relaxed">Create a room, pick a quiz, and challenge your friends.</p>
                             </div>
-                            <button className="doodle-button bg-green-400 w-full text-gray-900 text-2xl py-4 shadow-[6px_6px_0px_black] group-hover:shadow-[8px_8px_0px_black]">
+                            <button className="doodle-button bg-green-400 w-full text-gray-900 text-lg md:text-2xl py-4 shadow-[6px_6px_0px_black] group-hover:shadow-[8px_8px_0px_black]">
                                 Create Room
                             </button>
                         </div>
 
                         {/* Join Card */}
-                        <div className="doodle-card bg-purple-50 transform -rotate-1 hover:-rotate-2 hover:-translate-y-2 transition-all min-h-[320px] flex flex-col justify-between border-3">
+                        <div className="doodle-card bg-purple-50 transform -rotate-1 hover:-rotate-2 hover:-translate-y-2 transition-all min-h-[280px] md:min-h-[320px] flex flex-col justify-between border-3">
                             <div>
                                 <div className="flex justify-between items-start mb-6">
-                                    <h3 className="text-4xl font-bold font-doodle">Join a Game</h3>
-                                    <div className="text-5xl">🎮</div>
+                                    <h3 className="text-2xl md:text-4xl font-bold font-doodle">Join a Game</h3>
+                                    <div className="text-4xl md:text-5xl">🎮</div>
                                 </div>
-                                <p className="font-doodle text-2xl mb-6 text-gray-600 leading-relaxed">Got a code? Enter it below to jump in.</p>
+                                <p className="font-doodle text-lg md:text-2xl mb-6 text-gray-600 leading-relaxed">Got a code? Enter it below to jump in.</p>
                             </div>
 
                             <form onSubmit={handleJoinGame} className="space-y-4">
                                 <input
                                     type="text"
-                                    className="doodle-input text-center text-3xl uppercase tracking-widest bg-white h-16 border-2 focus:border-purple-500"
+                                    className="doodle-input text-center text-xl md:text-3xl uppercase tracking-widest bg-white h-14 md:h-16 border-2 focus:border-purple-500"
                                     placeholder="CODE"
                                     maxLength={6}
                                     value={joinCode}
                                     onChange={(e) => setJoinCode(e.target.value.toUpperCase())}
                                 />
-                                <button type="submit" className="doodle-button bg-purple-400 w-full text-gray-900 text-2xl py-4 shadow-[6px_6px_0px_black] hover:shadow-[8px_8px_0px_black]">
+                                <button type="submit" className="doodle-button bg-purple-400 w-full text-gray-900 text-lg md:text-2xl py-4 shadow-[6px_6px_0px_black] hover:shadow-[8px_8px_0px_black]">
                                     Join Room
                                 </button>
                             </form>
@@ -140,10 +140,10 @@ const LandingPage = () => {
             <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-gradient-to-tr from-purple-100 to-transparent rounded-full opacity-60 mix-blend-multiply filter blur-[60px] animate-float pointer-events-none" style={{ animationDelay: '3s' }}></div>
 
             <div className="z-10 max-w-5xl w-full flex flex-col items-center flex-grow justify-center pt-12 md:pt-20">
-                <h1 className="text-6xl md:text-8xl font-bold text-gray-900 mb-6 drop-shadow-sm tracking-tighter transform -rotate-2 hover:rotate-0 transition-transform duration-500 cursor-default">
+                <h1 className="text-4xl md:text-8xl font-bold text-gray-900 mb-6 drop-shadow-sm tracking-tighter transform -rotate-2 hover:rotate-0 transition-transform duration-500 cursor-default">
                     Quiz
                     <span className="text-indigo-600 inline-block transform rotate-3">Storm</span>
-                    <span className="text-orange-500 text-5xl md:text-6xl align-top ml-2 absolute top-0 -right-8 md:-right-12 animate-bounce">⚡</span>
+                    <span className="text-orange-500 text-3xl md:text-6xl align-top ml-2 absolute top-0 -right-6 md:-right-12 animate-bounce">⚡</span>
                 </h1>
 
                 <p className="text-xl md:text-3xl text-gray-800 font-medium mb-10 max-w-2xl mx-auto leading-relaxed font-doodle transform rotate-1">

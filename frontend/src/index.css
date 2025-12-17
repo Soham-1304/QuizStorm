@@ -116,3 +116,45 @@ body {
     transform: rotate(3deg);
   }
 }
+
+/* Mobile Responsive Overrides */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  /* Reduce doodle effects on mobile */
+  .doodle-border {
+    border: 2px solid var(--color-ink);
+    box-shadow: 3px 3px 0px 0px var(--color-ink);
+  }
+
+  .doodle-border:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0px 0px var(--color-ink);
+  }
+
+  .doodle-button {
+    @apply px-4 py-2 text-base;
+    border: 2px solid var(--color-ink);
+    box-shadow: 3px 3px 0px #000;
+  }
+
+  .doodle-button:hover {
+    box-shadow: 4px 4px 0px #000;
+  }
+
+  .doodle-card {
+    @apply p-4;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .doodle-input {
+    @apply px-3 py-2 text-base;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .doodle-input:focus {
+    box-shadow: 2px 2px 0px rgba(79, 70, 229, 0.2);
+  }
+}
