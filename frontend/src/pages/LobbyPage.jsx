@@ -45,6 +45,24 @@ const LobbyPage = () => {
         }
     }, [socket]);
 
+    // Warn user before leaving/refreshing while in lobby
+    useEffect(() => {
+        const handleBeforeUnload = (e) => {
+            // Only show warning if user is in a room
+            if (roomCode) {
+                e.preventDefault();
+                e.returnValue = 'You are currently in a lobby. Leaving will remove you from the room. Are you sure?';
+                return e.returnValue;
+            }
+        };
+
+        window.addEventListener('beforeunload', handleBeforeUnload);
+
+        return () => {
+            window.removeEventListener('beforeunload', handleBeforeUnload);
+        };
+    }, [roomCode]);
+
     // Handlers removed as they are no longer used in the simplified view.
     // ResetGame is used in the Room view 'Leave' button.
 

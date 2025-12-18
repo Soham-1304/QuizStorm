@@ -27,6 +27,13 @@ body {
     radial-gradient(#cbd5e0 1px, transparent 1px);
   background-size: 20px 20px;
   background-position: 0 0, 10px 10px;
+
+  /* Font rendering optimizations for better mobile display */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
 }
 
 /* Custom Utilities for "Tacky" look */

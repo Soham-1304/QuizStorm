@@ -41,6 +41,25 @@ const GameRoomPage = () => {
         }
     }, [roomCode, urlRoomCode, navigate]);
 
+    // Warn user before leaving/refreshing during active game
+    useEffect(() => {
+        const handleBeforeUnload = (e) => {
+            // Only show warning if in active game (not waiting or finished)
+            if (roomCode && gameStatus !== 'finished' && gameStatus !== 'waiting') {
+                e.preventDefault();
+                // Modern browsers require returnValue to be set
+                e.returnValue = 'You are currently in a game room. Leaving will remove you from the room. Are you sure?';
+                return e.returnValue;
+            }
+        };
+
+        window.addEventListener('beforeunload', handleBeforeUnload);
+
+        return () => {
+            window.removeEventListener('beforeunload', handleBeforeUnload);
+        };
+    }, [roomCode, gameStatus]);
+
     const handleOptionSelect = (optionIndex) => {
         if (!answerLocked) {
             submitAnswer(optionIndex);
