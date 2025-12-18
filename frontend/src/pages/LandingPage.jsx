@@ -140,10 +140,10 @@ const LandingPage = () => {
             <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-gradient-to-tr from-purple-100 to-transparent rounded-full opacity-60 mix-blend-multiply filter blur-[60px] animate-float pointer-events-none" style={{ animationDelay: '3s' }}></div>
 
             <div className="z-10 max-w-5xl w-full flex flex-col items-center pt-12 md:pt-20">
-                <h1 className="text-4xl md:text-8xl font-bold text-gray-900 mb-6 drop-shadow-sm tracking-tighter transform -rotate-2 hover:rotate-0 transition-transform duration-500 cursor-default">
+                <h1 className="text-6xl md:text-8xl font-bold text-gray-900 mb-6 drop-shadow-sm tracking-tighter transform -rotate-2 hover:rotate-0 transition-transform duration-500 cursor-default">
                     Quiz
                     <span className="text-indigo-600 inline-block transform rotate-3">Storm</span>
-                    <span className="text-orange-500 text-3xl md:text-6xl align-top ml-2 absolute top-0 -right-6 md:-right-12 animate-bounce">⚡</span>
+                    <span className="text-orange-500 text-5xl md:text-6xl align-top ml-2 absolute top-0 -right-8 md:-right-12 animate-bounce">⚡</span>
                 </h1>
 
                 <p className="text-xl md:text-3xl text-gray-800 font-medium mb-10 max-w-2xl mx-auto leading-relaxed font-doodle transform rotate-1">
