@@ -1,14 +1,14 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
 /* 
   Theme: Doodle Pop (Fun, Tacky, Sketchy)
-  Font: Patrick Hand / Comic Neue (Simulated with standard fonts if import fails)
+  Font: Patrick Hand loaded via HTML <link> tag (better mobile support)
+  Fallbacks: Comic Sans MS → Comic Neue → Apple Chancery → cursive
 */
 
-
 @theme {
-  --font-doodle: 'Patrick Hand', 'Comic Sans MS', cursive;
+  --font-doodle: 'Patrick Hand', 'Comic Sans MS', 'Comic Neue',
+    'Apple Chancery', 'Bradley Hand', cursive;
 
   --color-paper: #fffdf5;
   --color-ink: #2d3748;
